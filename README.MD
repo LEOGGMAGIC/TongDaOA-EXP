@@ -2,7 +2,7 @@
 
 检测模块集成在Plugins文件夹内
 
-稍微改了一下这位大佬的exphttps://github.com/kitezzzGrim/tongda-exp
+稍微改了一下这位大佬的exp`https://github.com/kitezzzGrim/tongda-exp`
 
 ## 获取版本信息
 
