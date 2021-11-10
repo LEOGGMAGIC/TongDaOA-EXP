@@ -1,7 +1,7 @@
 import requests
 import time
 
-def unauth(host): # 常规空登录以及获取Cookie(全版本)
+def emptyPwd(host): # 常规空登录以及获取Cookie(全版本)
     content = ''
     content += '[->] 正在尝试空口令登录' + '\n'
     url = host + 'logincheck.php'
@@ -25,8 +25,8 @@ def unauth(host): # 常规空登录以及获取Cookie(全版本)
             print(content)
             return content
     except:
-        print("[-] 目标不存在空口令漏洞或者不能访问\n")
+        print("[-] 目标不存在空口令漏洞\n")
 
 def run(host):
-    time.sleep(0.2)
-    unauth(host)
+    time.sleep(1)
+    emptyPwd(host)

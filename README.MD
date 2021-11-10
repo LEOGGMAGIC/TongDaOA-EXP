@@ -1,5 +1,7 @@
 # 通达OA系列检测EXP
 
+通达OA V11全版本漏洞检测
+
 检测模块集成在Plugins文件夹内
 
 稍微改了一下这位大佬的exp`https://github.com/kitezzzGrim/tongda-exp`
@@ -38,11 +40,24 @@ python3
 
 先检测是否存在文件包含漏洞，如果存在直接上🐎
 
-存在漏洞会在这个目录生成冰蝎默认马`ispirit/interface/sh3ll.php`
+存在漏洞会在这个目录生成冰蝎马`ispirit/interface/sh3ll.php`
 
 密码rebeyond
 
-## 通达V11.x-V11.5任意用户登录获取cookie
+## 任意在线用户登录漏洞
 
 需要用户在线，检测RELOGIN
 
+## 通达<V11.8上传.user.ini文件包含漏洞getshell
+
+需填入cookie，输入PHPSESSID=XXXX
+
+存在漏洞会在这个目录上传冰蝎马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
+
+密码rebeyond
+
+## 通达<V11.6任意文件删除漏洞getshell（还没搞）
+
+删除`auth.inc.php`认证文件，有风险请在授权状态下使用
+
+放在danger文件夹内
