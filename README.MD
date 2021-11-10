@@ -12,7 +12,7 @@
 python3 TongDaOA.py
 ```
 
-根据提示输入URL地址：http://xxx.xxx.xxx.xxx:xxxx/
+根据提示输入URL地址：`http://xxx.xxx.xxx.xxx:xxxx/`
 
 注意URL最后带上`/`
 
