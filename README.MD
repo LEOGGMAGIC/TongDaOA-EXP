@@ -36,7 +36,7 @@ python3 TongDaOA.py
 
 先检测是否存在文件包含漏洞，如果存在直接上🐎
 
-存在漏洞会在这个目录生成冰蝎默认马`ispirit/interface/haha.php`
+存在漏洞会在这个目录生成冰蝎默认马`ispirit/interface/sh3ll.php`
 
 密码rebeyond
 
