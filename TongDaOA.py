@@ -4,9 +4,14 @@ import queue
 import time
 from Plugins import TongDaOA_getVersion
 from Plugins import TongDaOA_unauth
+from Plugins import TongDaOA_getV11Session
+from Plugins import TongDaOA_fileInclude
+from Plugins import TongDaOA_fileUpload
+from Plugins import TongDaOA_relogin
+
 
 Vuls = []
-host = 'http://192.168.32.129:8081'
+host = input("请输入目标URL地址：")
 QeueWork = queue.Queue(50)
 threads = []
 exitFlag = 0
