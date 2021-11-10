@@ -9,14 +9,18 @@
 # 使用方法
 
 ```
-python3 TongDaOA.py
+python TongDaOA.py
 ```
 
-根据提示输入URL地址：`http://xxx.xxx.xxx.xxx:xxxx/`
+python3
 
-注意URL最后带上`/`
+根据提示输入URL地址：`http://xxx.xxx.xxx.xxx:xxxx/`，注意URL最后带上`/`
 
-一键检测
+一键检测，测试案例如下（通达V11.2）
+
+![image-20211110105941832](https://image-1303962289.cos.ap-beijing.myqcloud.com/image-20211110105941832.png)
+
+![image-20211110105956317](https://image-1303962289.cos.ap-beijing.myqcloud.com/image-20211110105956317.png)
 
 ## 获取版本信息
 
