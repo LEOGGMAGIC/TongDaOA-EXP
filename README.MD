@@ -18,9 +18,7 @@ python3
 
 一键检测，测试案例如下（通达V11.2）
 
-![image-20211110105941832](https://image-1303962289.cos.ap-beijing.myqcloud.com/image-20211110105941832.png)
-
-![image-20211110105956317](https://image-1303962289.cos.ap-beijing.myqcloud.com/image-20211110105956317.png)
+![](pic/1.gif)
 
 ## 获取版本信息
 
