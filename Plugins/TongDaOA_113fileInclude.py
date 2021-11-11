@@ -24,5 +24,5 @@ def fileInclude(host): # 通达<11.3任意文件包含漏洞
         pass
 
 def run(host):
-    time.sleep(3)
+    time.sleep(2)
     fileInclude(host)
