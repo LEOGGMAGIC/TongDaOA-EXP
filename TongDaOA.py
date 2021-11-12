@@ -6,7 +6,7 @@ from Plugins import TongDaOA_getVersion
 from Plugins import TongDaOA_emptyPwd
 from Plugins import TongDaOA_113fileInclude
 from Plugins import TongDaOA_113fileUpload
-from Plugins import TongDaOA_115getSession
+from Plugins import TongDaOA_114getSession
 from Plugins import TongDaOA_117relogin
 from Plugins import TongDaOA_118useriniUpload
 
