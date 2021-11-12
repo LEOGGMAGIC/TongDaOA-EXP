@@ -48,6 +48,8 @@ python TongDaOA.py
 
 控制UID=1来获取admin的cookie
 
+看网上文章说11.5也有，我本地测试11.5无法利用这个漏洞，有了解过的同学欢迎交流~
+
 ### 通达<V11.7任意在线用户登录漏洞
 
 需要用户在线，检测RELOGIN
@@ -59,8 +61,6 @@ python TongDaOA.py
 存在漏洞会在这个目录上传冰蝎马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
 
 密码rebeyond
-
-<<<<<<< HEAD
 
 ## Danger文件夹
 
