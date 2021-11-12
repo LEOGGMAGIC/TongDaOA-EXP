@@ -44,11 +44,19 @@ python TongDaOA.py
 
 密码rebeyond
 
+<<<<<<< HEAD
 ### 通达<V11.4任意用户cookie获取漏洞
 
 控制UID=1来获取admin的cookie
 
 ### 通达<V11.7任意在线用户登录漏洞
+=======
+## 通达<V11.4任意用户cookie获取漏洞
+
+控制UID=1来获取admin的cookie
+
+## 通达<V11.7任意在线用户登录漏洞
+>>>>>>> 34cceb05bd3d02272cc84d9a26be3b303fed5ab5
 
 需要用户在线，检测RELOGIN
 
@@ -60,6 +68,7 @@ python TongDaOA.py
 
 密码rebeyond
 
+<<<<<<< HEAD
 ## Danger文件夹
 
 ### 通达V11.5后台SQL注入漏洞
@@ -104,6 +113,22 @@ python TongDaOA_117sqlInjection.py
 
 在danger文件夹内运行
 
+=======
+## 通达V11.6任意文件删除漏洞getshell
+
+删除`auth.inc.php`认证文件，有风险请在授权状态下使用（任意删除文件只在11.6有）
+
+在danger文件夹内运行
+
+```
+python TongDaOA_116deleteFile.py
+```
+
+## 通达<V11.9 后台SQL时间盲注漏洞
+
+在danger文件夹内运行
+
+>>>>>>> 34cceb05bd3d02272cc84d9a26be3b303fed5ab5
 ```
 python TongDaOA_119sqlInjection.py
 ```
