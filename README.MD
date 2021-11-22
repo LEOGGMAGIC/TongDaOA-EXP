@@ -58,9 +58,9 @@ python TongDaOA.py
 
 需填入cookie，输入PHPSESSID=XXXX
 
-存在漏洞会在这个目录上传冰蝎马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
+存在漏洞会在这个目录上传哥斯拉马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
 
-密码rebeyond
+密码pass
 
 ## Danger文件夹
 
