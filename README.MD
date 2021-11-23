@@ -8,9 +8,7 @@
 
 代码写的有点💩，有新的检测模块和意见欢迎交流学习~
 
-## Plugins文件夹
-
-使用方法（python3）
+## 使用方法（python3）
 
 ```
 python TongDaOA.py
@@ -18,7 +16,7 @@ python TongDaOA.py
 
 根据提示输入URL地址：`http://xxx.xxx.xxx.xxx:xxxx/`，注意URL最后带上`/`
 
-一键检测，测试案例如下（通达V11.2）
+一键检测，测试案例如下（通达V11.6）
 
 ![](pic/1.gif)
 
@@ -50,20 +48,6 @@ python TongDaOA.py
 
 看网上文章说11.5也有，我本地测试11.5无法利用这个漏洞，有了解过的同学欢迎交流~
 
-### 通达<V11.7任意在线用户登录漏洞
-
-需要用户在线，检测RELOGIN
-
-### 通达<V11.8上传.user.ini文件包含漏洞getshell
-
-需填入cookie，输入PHPSESSID=XXXX
-
-存在漏洞会在这个目录上传冰蝎马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
-
-密码rebeyond
-
-## Danger文件夹
-
 ### 通达V11.5后台SQL注入漏洞
 
 需要一个普通账户的用户名/密码
@@ -72,33 +56,21 @@ GET方法测试`general/appbuilder/web/report/repdetail/edit?link_type=false&slo
 
 测试id是否存在注入
 
-```
-python TongDaOA_115sqlInjection.py
-```
-
-输入URL，用户名/密码，如果存在漏洞，把请求包放入sqlmap跑
+输入用户名/密码，如果存在漏洞，把请求包放入sqlmap跑
 
 ### 通达V11.6任意文件删除漏洞getshell
 
 删除`auth.inc.php`认证文件，有风险请在授权状态下使用（任意删除文件只在11.6有）
 
-在danger文件夹内运行
+上传哥斯拉shell，密码为pass
 
-```
-python TongDaOA_116deleteFile.py
-```
+### 通达<V11.7任意在线用户登录漏洞
+
+需要用户在线，检测RELOGIN
 
 ### 通达V11.7后台SQL注入&新增数据库用户写webshell
 
 此漏洞需要一个普通账户的用户名/密码
-
-在danger文件夹内运行
-
-```
-python TongDaOA_117sqlInjection.py
-```
-
-根据提示输入URL地址，以及用户名/密码
 
 会向数据中新增账户并提权`abc123:abc123@abc123`
 
@@ -114,14 +86,16 @@ python TongDaOA_117sqlInjection.py
 # SELECT '一句话木马';
 ```
 
+### 通达<V11.8上传.user.ini文件包含漏洞getshell
+
+需填入cookie，输入PHPSESSID=XXXX
+
+存在漏洞会在这个目录上传哥斯拉马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
+
+密码pass
+
 ### 通达<V11.9 后台SQL时间盲注漏洞
 
-此漏洞需要cookie，请先运行TongDaOA.py通过其他漏洞获取cookie
-
-在danger文件夹内运行
-
-```
-python TongDaOA_119sqlInjection.py
-```
+此漏洞需要cookie，请先运行TongDaOA.py通过其他漏洞获取cookie（需要管理员权限）
 
 测试有漏洞后放到sqlmap跑

