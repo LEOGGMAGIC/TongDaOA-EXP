@@ -48,23 +48,6 @@ python TongDaOA.py
 
 看网上文章说11.5也有，我本地测试11.5无法利用这个漏洞，有了解过的同学欢迎交流~
 
-<<<<<<< HEAD
-=======
-### 通达<V11.7任意在线用户登录漏洞
-
-需要用户在线，检测RELOGIN
-
-### 通达<V11.8上传.user.ini文件包含漏洞getshell
-
-需填入cookie，输入PHPSESSID=XXXX
-
-存在漏洞会在这个目录上传哥斯拉马`general/reportshop/workshop/report/attachment-remark/form.inc.php`
-
-密码pass
-
-## Danger文件夹
-
->>>>>>> 07a4c4173e89f83799e3b1cf5dca2362fda7ce1b
 ### 通达V11.5后台SQL注入漏洞
 
 需要一个普通账户的用户名/密码
